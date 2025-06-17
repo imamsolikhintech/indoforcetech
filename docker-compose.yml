@@ -10,6 +10,6 @@ services:
       - .:/app # Optional: Mount source code for development (reflects changes)
       - /app/node_modules # Optional: Don't mount node_modules from host
     environment:
-      - NODE_ENV=development # Atau production, sesuai kebutuhan
+      - NODE_ENV=production # Atau production, sesuai kebutuhan
     # Untuk Vite, Anda mungkin perlu memastikan dev server berjalan di host 0.0.0.0
     # command: yarn dev --host
