@@ -402,8 +402,8 @@ const HomePage = () => {
             dan menghemat biaya operasional secara signifikan."
           </blockquote>
           <div className="mt-8 animate-fade-in-up animation-delay-300">
-            <p className="text-xl font-semibold text-white">Budi Santoso</p>
-            <p className="text-blue-100">CEO, PT Maju Bersama</p>
+            <p className="text-xl font-semibold text-white">Imam Solikhin</p>
+            <p className="text-blue-100">CEO, INDOFORCETECH</p>
           </div>
         </div>
       </section>
