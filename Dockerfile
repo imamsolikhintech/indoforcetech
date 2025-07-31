@@ -6,7 +6,6 @@ VOLUME /app/node_modules
 COPY ./package.json package.json
 RUN npm install
 COPY . .
-COPY ./.env.pos .env
 RUN npm run build
 
 # production stage
