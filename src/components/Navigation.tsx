@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logoImage from '/logo.png';
+// import logoImage from '/logo.png';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center animate-fade-in">
-            <img src={logoImage} alt="IndoForceTech Logo" className="h-8 w-8" />
+            <img src="/logo.png" alt="IndoForceTech Logo" className="h-8 w-8" />
             <span className="ml-2 text-xl font-bold text-gray-900">IndoForceTech</span>
           </Link>
           

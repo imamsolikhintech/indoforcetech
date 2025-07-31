@@ -1,6 +1,5 @@
 import React from 'react';
 import { Facebook, Linkedin, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import logoImage from '/logo.png';
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="animate-fade-in">
             <div className="flex items-center mb-4">
-              <img src={logoImage} alt="IndoForceTech Logo" className="h-8 w-8" />
+              <img src="/logo.png" alt="IndoForceTech Logo" className="h-8 w-8" />
               <span className="ml-2 text-lg font-bold text-white">IndoForceTech</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
