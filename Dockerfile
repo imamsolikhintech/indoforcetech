@@ -1,44 +1,27 @@
-# Stage 1: Build the React application
-FROM node:18-alpine AS builder
+# build stage
+FROM node:18-alpine3.21 as build-stage
 WORKDIR /app
-
-# Copy package files
-COPY package.json yarn.lock ./
-
-# Install dependencies
-RUN yarn install --frozen-lockfile --production=false
-
-# Copy source code
+RUN node -v
+VOLUME /app/node_modules
+COPY ./package.json package.json
+RUN npm install
 COPY . .
+COPY ./.env.pos .env
+RUN npm run build
 
-# Build the application
-RUN yarn build
+# production stage
+FROM nginx:stable-alpine as production-stage
 
-# Verify build output
-RUN ls -la /app/dist
+ENV TZ=Asia/Jakarta
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Stage 2: Serve the application using nginx
-FROM nginx:stable-alpine
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+# Copy built static files and nginx configuration
+# COPY ./dist /usr/share/nginx/html
+COPY ./config/nginx.conf /etc/nginx/nginx.conf
+COPY ./config/default.conf /etc/nginx/conf.d/default.conf
 
-# Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
-
-# Copy built application
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Copy custom nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Create nginx user and set permissions
-RUN chown -R nginx:nginx /usr/share/nginx/html && \
-    chmod -R 755 /usr/share/nginx/html
-
-# Expose port
 EXPOSE 80
-
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost/health || exit 1
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
