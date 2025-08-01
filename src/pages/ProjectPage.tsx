@@ -38,6 +38,10 @@ const ProjectPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
 
+  // Auto scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   const projects: Project[] = [
     {
       id: 1,
