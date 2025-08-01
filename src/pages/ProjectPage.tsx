@@ -192,6 +192,431 @@ const ProjectPage = () => {
         "Deployment time 90% lebih cepat",
         "99.99% availability"
       ]
+    },
+    {
+      id: 7,
+      title: "Sistem ERP Manufaktur PT Industri Nusantara",
+      description: "Implementasi sistem ERP khusus untuk industri manufaktur dengan fokus pada production planning dan quality control.",
+      category: "ERP System",
+      technologies: ["Angular", "Spring Boot", "Oracle", "Kubernetes", "Jenkins"],
+      image: "/thumbnails/erp-system.svg",
+      client: "PT Industri Nusantara",
+      duration: "10 bulan",
+      team: 14,
+      status: "completed",
+      features: [
+        "Production Planning Module",
+        "Quality Control System",
+        "Supply Chain Management",
+        "Financial Reporting",
+        "HR Management System"
+      ],
+      results: [
+        "Produktivitas meningkat 65%",
+        "Waste reduction 35%",
+        "Quality score 98%",
+        "Cost saving 45%"
+      ]
+    },
+    {
+      id: 8,
+      title: "ERP Healthcare Management System",
+      description: "Sistem ERP terintegrasi untuk rumah sakit dengan manajemen pasien, inventori medis, dan billing system.",
+      category: "ERP System",
+      technologies: ["React", "Django", "PostgreSQL", "Redis", "Docker"],
+      image: "/thumbnails/erp-system.svg",
+      client: "RS Sehat Sentosa",
+      duration: "9 bulan",
+      team: 16,
+      status: "ongoing",
+      features: [
+        "Patient Management System",
+        "Medical Inventory Control",
+        "Electronic Health Records",
+        "Billing & Insurance",
+        "Staff Scheduling"
+      ],
+      results: [
+        "Patient wait time -50%",
+        "Administrative cost -30%",
+        "Data accuracy 99.5%",
+        "Staff efficiency +40%"
+      ]
+    },
+    {
+      id: 9,
+      title: "Marketplace Fashion Indonesia",
+      description: "Platform e-commerce khusus fashion lokal dengan fitur virtual try-on dan personalized recommendation.",
+      category: "E-Commerce",
+      technologies: ["Next.js", "Express.js", "MongoDB", "AI/ML", "WebRTC"],
+      image: "/thumbnails/e-commerce.svg",
+      client: "Fashion Hub Indonesia",
+      duration: "8 bulan",
+      team: 12,
+      status: "completed",
+      features: [
+        "Virtual Try-On Technology",
+        "AI Fashion Recommendation",
+        "Social Commerce Features",
+        "Multi-payment Gateway",
+        "Influencer Partnership Program"
+      ],
+      results: [
+        "2000+ brand partners",
+        "Monthly GMV Rp 75M+",
+        "User engagement +85%",
+        "Return rate -60%"
+      ]
+    },
+    {
+      id: 10,
+      title: "Grocery Delivery Platform",
+      description: "Aplikasi e-commerce untuk delivery groceries dengan real-time tracking dan inventory management.",
+      category: "E-Commerce",
+      technologies: ["React Native", "Node.js", "MySQL", "Socket.io", "Google Maps API"],
+      image: "/thumbnails/e-commerce.svg",
+      client: "FreshMart Digital",
+      duration: "6 bulan",
+      team: 10,
+      status: "completed",
+      features: [
+        "Real-time Order Tracking",
+        "Smart Inventory System",
+        "Multiple Store Integration",
+        "Scheduled Delivery",
+        "Loyalty Program"
+      ],
+      results: [
+        "50K+ active users",
+        "Average delivery 45 minutes",
+        "Customer satisfaction 4.7/5",
+        "Monthly orders 100K+"
+      ]
+    },
+    {
+      id: 11,
+      title: "B2B Wholesale E-Commerce",
+      description: "Platform e-commerce B2B untuk distributor dan retailer dengan sistem kredit dan bulk ordering.",
+      category: "E-Commerce",
+      technologies: ["Vue.js", "Laravel", "PostgreSQL", "Elasticsearch", "RabbitMQ"],
+      image: "/thumbnails/e-commerce.svg",
+      client: "Wholesale Connect",
+      duration: "12 bulan",
+      team: 18,
+      status: "ongoing",
+      features: [
+        "Bulk Order Management",
+        "Credit Limit System",
+        "Price Negotiation Tool",
+        "Inventory Sync",
+        "Advanced Analytics"
+      ],
+      results: [
+        "500+ distributors onboard",
+        "Monthly transaction Rp 200M+",
+        "Order processing time -70%",
+        "Payment collection +90%"
+      ]
+    },
+    {
+      id: 12,
+      title: "Fintech Mobile Wallet",
+      description: "Aplikasi mobile wallet dengan fitur pembayaran digital, transfer, dan investasi mikro.",
+      category: "Mobile App",
+      technologies: ["Flutter", "Firebase", "Node.js", "MongoDB", "Blockchain"],
+      image: "/thumbnails/mobile-app.svg",
+      client: "DigitalPay Indonesia",
+      duration: "7 bulan",
+      team: 11,
+      status: "completed",
+      features: [
+        "Digital Wallet",
+        "QR Code Payment",
+        "Micro Investment",
+        "Bill Payment",
+        "Peer-to-Peer Transfer"
+      ],
+      results: [
+        "1M+ downloads",
+        "Daily transactions 50K+",
+        "Transaction value Rp 10B+/month",
+        "User retention 85%"
+      ]
+    },
+    {
+      id: 13,
+      title: "Healthcare Mobile App",
+      description: "Aplikasi mobile untuk konsultasi dokter online, booking appointment, dan medical records.",
+      category: "Mobile App",
+      technologies: ["React Native", "WebRTC", "Node.js", "PostgreSQL", "AWS"],
+      image: "/thumbnails/mobile-app.svg",
+      client: "HealthCare Digital",
+      duration: "5 bulan",
+      team: 9,
+      status: "completed",
+      features: [
+        "Video Consultation",
+        "Appointment Booking",
+        "Digital Prescription",
+        "Health Records",
+        "Medicine Delivery"
+      ],
+      results: [
+        "200+ doctors registered",
+        "10K+ consultations/month",
+        "Patient satisfaction 4.8/5",
+        "Response time <2 minutes"
+      ]
+    },
+    {
+      id: 14,
+      title: "Education Learning Mobile App",
+      description: "Platform pembelajaran online mobile dengan fitur live streaming, quiz interaktif, dan progress tracking.",
+      category: "Mobile App",
+      technologies: ["Flutter", "Django", "PostgreSQL", "WebRTC", "AI/ML"],
+      image: "/thumbnails/mobile-app.svg",
+      client: "EduTech Indonesia",
+      duration: "8 bulan",
+      team: 13,
+      status: "ongoing",
+      features: [
+        "Live Streaming Classes",
+        "Interactive Quizzes",
+        "Progress Analytics",
+        "Offline Content",
+        "AI-powered Recommendations"
+      ],
+      results: [
+        "100K+ students enrolled",
+        "500+ courses available",
+        "Completion rate 78%",
+        "Student satisfaction 4.6/5"
+      ]
+    },
+    {
+      id: 15,
+      title: "Smart Agriculture IoT Platform",
+      description: "Sistem IoT untuk monitoring pertanian pintar dengan sensor kelembaban, suhu, dan otomasi irigasi.",
+      category: "IoT System",
+      technologies: ["React", "Python", "InfluxDB", "MQTT", "LoRaWAN"],
+      image: "/thumbnails/iot-system.svg",
+      client: "AgriTech Solutions",
+      duration: "6 bulan",
+      team: 8,
+      status: "completed",
+      features: [
+        "Soil Moisture Monitoring",
+        "Weather Station Integration",
+        "Automated Irrigation",
+        "Crop Health Analytics",
+        "Mobile Dashboard"
+      ],
+      results: [
+        "Water usage -40%",
+        "Crop yield +35%",
+        "Labor cost -50%",
+        "ROI achieved in 8 months"
+      ]
+    },
+    {
+      id: 16,
+      title: "Industrial IoT Monitoring System",
+      description: "Platform IoT untuk monitoring mesin industri dengan predictive maintenance dan real-time alerts.",
+      category: "IoT System",
+      technologies: ["Angular", "Node.js", "TimescaleDB", "Grafana", "Edge Computing"],
+      image: "/thumbnails/iot-system.svg",
+      client: "PT Manufaktur Maju",
+      duration: "9 bulan",
+      team: 12,
+      status: "completed",
+      features: [
+        "Machine Health Monitoring",
+        "Predictive Maintenance",
+        "Energy Consumption Tracking",
+        "Production Analytics",
+        "Alert Management System"
+      ],
+      results: [
+        "Downtime reduction 60%",
+        "Maintenance cost -45%",
+        "Energy efficiency +25%",
+        "Production output +20%"
+      ]
+    },
+    {
+      id: 17,
+      title: "Smart Building Management IoT",
+      description: "Sistem IoT untuk manajemen gedung pintar dengan kontrol HVAC, lighting, dan security terintegrasi.",
+      category: "IoT System",
+      technologies: ["Vue.js", "Python", "InfluxDB", "Zigbee", "BACnet"],
+      image: "/thumbnails/iot-system.svg",
+      client: "Smart Building Corp",
+      duration: "10 bulan",
+      team: 15,
+      status: "ongoing",
+      features: [
+        "HVAC Automation",
+        "Smart Lighting Control",
+        "Access Control System",
+        "Energy Management",
+        "Occupancy Analytics"
+      ],
+      results: [
+        "Energy consumption -35%",
+        "Operational cost -30%",
+        "Tenant satisfaction +50%",
+        "Security incidents -80%"
+      ]
+    },
+    {
+      id: 18,
+      title: "Enterprise Security Operations Center",
+      description: "Implementasi SOC (Security Operations Center) dengan SIEM, threat hunting, dan incident response.",
+      category: "Cybersecurity",
+      technologies: ["Splunk", "Phantom", "CrowdStrike", "Nessus", "Python"],
+      image: "/thumbnails/cybersecurity.svg",
+      client: "PT Secure Enterprise",
+      duration: "5 bulan",
+      team: 7,
+      status: "completed",
+      features: [
+        "24/7 Security Monitoring",
+        "Threat Intelligence Integration",
+        "Automated Incident Response",
+        "Vulnerability Management",
+        "Security Awareness Training"
+      ],
+      results: [
+        "Mean detection time <5 minutes",
+        "False positive rate <2%",
+        "Incident response time -75%",
+        "Security posture score 95%"
+      ]
+    },
+    {
+      id: 19,
+      title: "Banking Cybersecurity Framework",
+      description: "Implementasi framework keamanan siber komprehensif untuk institusi perbankan sesuai standar OJK.",
+      category: "Cybersecurity",
+      technologies: ["IBM QRadar", "Fortinet", "CyberArk", "Varonis", "Rapid7"],
+      image: "/thumbnails/cybersecurity.svg",
+      client: "Bank Digital Indonesia",
+      duration: "8 bulan",
+      team: 10,
+      status: "completed",
+      features: [
+        "Multi-factor Authentication",
+        "Data Loss Prevention",
+        "Privileged Access Management",
+        "Network Segmentation",
+        "Compliance Reporting"
+      ],
+      results: [
+        "Zero security breaches",
+        "OJK compliance achieved",
+        "Security audit score A+",
+        "Customer trust +60%"
+      ]
+    },
+    {
+      id: 20,
+      title: "Government Cybersecurity Infrastructure",
+      description: "Pembangunan infrastruktur keamanan siber untuk instansi pemerintah dengan standar keamanan nasional.",
+      category: "Cybersecurity",
+      technologies: ["Elastic SIEM", "Palo Alto", "Trend Micro", "Symantec", "Custom SOC"],
+      image: "/thumbnails/cybersecurity.svg",
+      client: "Kementerian Digital",
+      duration: "12 bulan",
+      team: 20,
+      status: "ongoing",
+      features: [
+        "National Cyber Threat Center",
+        "Government Network Security",
+        "Digital Identity Management",
+        "Cyber Incident Response",
+        "Security Policy Framework"
+      ],
+      results: [
+        "National security level +80%",
+        "Cyber attack prevention 99%",
+        "Government data protection 100%",
+        "Inter-agency collaboration +90%"
+      ]
+    },
+    {
+      id: 21,
+      title: "Multi-Cloud Infrastructure Migration",
+      description: "Migrasi dan optimasi infrastruktur ke multi-cloud environment dengan disaster recovery dan high availability.",
+      category: "Cloud Computing",
+      technologies: ["AWS", "Azure", "GCP", "Terraform", "Ansible"],
+      image: "/thumbnails/cloud-computing.svg",
+      client: "PT Tech Innovator",
+      duration: "6 bulan",
+      team: 8,
+      status: "completed",
+      features: [
+        "Multi-cloud Architecture",
+        "Disaster Recovery Setup",
+        "Auto-scaling Configuration",
+        "Cost Optimization",
+        "Security Compliance"
+      ],
+      results: [
+        "99.99% uptime achieved",
+        "Infrastructure cost -55%",
+        "Deployment speed +400%",
+        "Disaster recovery RTO <1 hour"
+      ]
+    },
+    {
+      id: 22,
+      title: "Serverless Application Platform",
+      description: "Pembangunan platform aplikasi serverless dengan microservices architecture dan event-driven design.",
+      category: "Cloud Computing",
+      technologies: ["AWS Lambda", "API Gateway", "DynamoDB", "EventBridge", "CloudFormation"],
+      image: "/thumbnails/cloud-computing.svg",
+      client: "StartupTech Indonesia",
+      duration: "4 bulan",
+      team: 6,
+      status: "completed",
+      features: [
+        "Serverless Microservices",
+        "Event-driven Architecture",
+        "Auto-scaling Functions",
+        "Pay-per-use Model",
+        "Real-time Analytics"
+      ],
+      results: [
+        "Operating cost -70%",
+        "Scalability unlimited",
+        "Development speed +300%",
+        "Time to market -80%"
+      ]
+    },
+    {
+      id: 23,
+      title: "Enterprise Cloud Data Platform",
+      description: "Implementasi data platform cloud untuk big data analytics dengan machine learning dan real-time processing.",
+      category: "Cloud Computing",
+      technologies: ["AWS", "Snowflake", "Apache Spark", "Airflow", "MLflow"],
+      image: "/thumbnails/cloud-computing.svg",
+      client: "Data Analytics Corp",
+      duration: "9 bulan",
+      team: 14,
+      status: "ongoing",
+      features: [
+        "Data Lake Architecture",
+        "Real-time Stream Processing",
+        "ML Model Deployment",
+        "Data Governance",
+        "Self-service Analytics"
+      ],
+      results: [
+        "Data processing speed +500%",
+        "Analytics insights real-time",
+        "ML model accuracy 95%+",
+        "Business decision speed +200%"
+      ]
     }
   ];
 
