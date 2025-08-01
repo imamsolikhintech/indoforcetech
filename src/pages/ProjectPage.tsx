@@ -755,7 +755,7 @@ const ProjectPage = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16">
+      <section className="py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredProjects.length === 0 ? (
             <div className="text-center py-12">
@@ -767,7 +767,7 @@ const ProjectPage = () => {
                 <div
                   key={project.id}
                   className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden group hover:scale-105 ${
-                    isVisible[`project-${project.id}`] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    isVisible[`project-${project.id}`] ? 'opacity-100 translate-y-0' : 'opacity-1 translate-y-10'
                   }`}
                   data-animate
                   id={`project-${project.id}`}
