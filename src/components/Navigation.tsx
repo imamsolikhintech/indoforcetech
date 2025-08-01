@@ -1,10 +1,34 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Code, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('beranda');
   const location = useLocation();
+
+  // Track active section on scroll
+  React.useEffect(() => {
+    if (location.pathname !== '/') return;
+
+    const handleScroll = () => {
+      const sections = ['beranda', 'layanan', 'solusi', 'kontak'];
+      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
 
   const smoothScroll = (targetId: string) => {
     if (location.pathname !== '/') {
@@ -39,13 +63,17 @@ const Navigation = () => {
   };
   
   const isActive = (path: string) => location.pathname === path;
+  const isSectionActive = (section: string) => {
+    if (location.pathname !== '/') return false;
+    return activeSection === section;
+  };
 
   return (
     <nav className="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" onClick={handleHomeClick} className="flex items-center animate-fade-in">
-            <img src="/logo.png" alt="IndoForceTech Logo" className="h-8 w-8" />
+            <img src="/logo.png" alt="IndoForceTech Logo" className="h-10 w-10" />
             <span className="ml-2 text-xl font-bold text-gray-900">IndoForceTech</span>
           </Link>
           
@@ -56,20 +84,24 @@ const Navigation = () => {
                 to="/"
                 onClick={handleHomeClick}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                  isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  isActive('/') && isSectionActive('beranda') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
                 Beranda
               </Link>
               <button 
                 onClick={() => smoothScroll('layanan')}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                  isSectionActive('layanan') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
                 Layanan
               </button>
               <button 
                 onClick={() => smoothScroll('solusi')}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                  isSectionActive('solusi') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
                 Solusi
               </button>
@@ -84,7 +116,9 @@ const Navigation = () => {
               </Link>
               <button 
                 onClick={() => smoothScroll('kontak')}
-                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                  isSectionActive('kontak') ? 'bg-blue-700 text-white' : 'bg-blue-600 text-white hover:bg-blue-700'
+                }`}
               >
                 Kontak
               </button>
@@ -111,20 +145,24 @@ const Navigation = () => {
                 to="/"
                 onClick={handleHomeClick}
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:scale-105 ${
-                  isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  isActive('/') && isSectionActive('beranda') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
                 Beranda
               </Link>
               <button 
                 onClick={() => smoothScroll('layanan')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 transition-all duration-300 hover:scale-105"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:scale-105 ${
+                  isSectionActive('layanan') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
                 Layanan
               </button>
               <button 
                 onClick={() => smoothScroll('solusi')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 transition-all duration-300 hover:scale-105"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:scale-105 ${
+                  isSectionActive('solusi') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
                 Solusi
               </button>
@@ -139,7 +177,9 @@ const Navigation = () => {
               </Link>
               <button 
                 onClick={() => smoothScroll('kontak')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 hover:scale-105"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:scale-105 ${
+                  isSectionActive('kontak') ? 'bg-blue-700 text-white' : 'bg-blue-600 text-white hover:bg-blue-700'
+                }`}
               >
                 Kontak
               </button>
