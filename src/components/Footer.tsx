@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="animate-fade-in">
             <div className="flex items-center mb-4">
-              <img src="/logo.png" alt="IndoForceTech Logo" className="h-12 w-12" />
+              <img src="/logo.png" alt="IndoForceTech Logo" className="h-12 w-12 bg-white" />
               <span className="ml-2 text-lg font-bold text-white">IndoForceTech</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
