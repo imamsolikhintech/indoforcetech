@@ -1,0 +1,133 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0f172a"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+    
+    <!-- Gradient for shield -->
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for warning -->
+    <linearGradient id="warningGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grid)"/>
+  
+  <!-- Central Shield -->
+  <path d="M200 80 L220 90 L220 130 Q220 150 200 160 Q180 150 180 130 L180 90 Z" fill="url(#shieldGradient)" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M200 90 L215 98 L215 130 Q215 145 200 152 Q185 145 185 130 L185 98 Z" fill="#1e40af"/>
+  
+  <!-- Shield checkmark -->
+  <path d="M192 125 L198 131 L208 115" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Firewall representation -->
+  <rect x="120" y="100" width="50" height="80" rx="5" fill="#374151" stroke="#6b7280" stroke-width="2"/>
+  <rect x="125" y="105" width="40" height="70" rx="2" fill="#1f2937"/>
+  
+  <!-- Firewall ports -->
+  <rect x="130" y="110" width="6" height="4" fill="#22c55e"/>
+  <rect x="140" y="110" width="6" height="4" fill="#22c55e"/>
+  <rect x="150" y="110" width="6" height="4" fill="#ef4444"/>
+  <rect x="130" y="118" width="6" height="4" fill="#22c55e"/>
+  <rect x="140" y="118" width="6" height="4" fill="#fbbf24"/>
+  <rect x="150" y="118" width="6" height="4" fill="#22c55e"/>
+  
+  <text x="145" y="135" text-anchor="middle" fill="#22c55e" font-family="monospace" font-size="8" font-weight="bold">FIREWALL</text>
+  <text x="145" y="145" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="6">ACTIVE</text>
+  
+  <!-- Antivirus Scanner -->
+  <rect x="230" y="100" width="50" height="80" rx="5" fill="#374151" stroke="#6b7280" stroke-width="2"/>
+  <rect x="235" y="105" width="40" height="70" rx="2" fill="#1f2937"/>
+  
+  <!-- Scanner animation -->
+  <rect x="240" y="110" width="30" height="2" fill="#22c55e" opacity="0.8">
+    <animate attributeName="y" values="110;165;110" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <text x="255" y="135" text-anchor="middle" fill="#22c55e" font-family="monospace" font-size="8" font-weight="bold">ANTIVIRUS</text>
+  <text x="255" y="145" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="6">SCANNING</text>
+  <text x="255" y="155" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="6">98% CLEAN</text>
+  
+  <!-- Threat Detection -->
+  <circle cx="80" cy="200" r="25" fill="url(#warningGradient)" stroke="#fca5a5" stroke-width="2"/>
+  <circle cx="80" cy="200" r="18" fill="#7f1d1d"/>
+  <text x="80" y="198" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">!</text>
+  <text x="80" y="235" text-anchor="middle" fill="#ef4444" font-family="monospace" font-size="8" font-weight="bold">THREAT</text>
+  <text x="80" y="245" text-anchor="middle" fill="#ef4444" font-family="monospace" font-size="8" font-weight="bold">DETECTED</text>
+  
+  <!-- Encryption Lock -->
+  <rect x="310" y="180" width="30" height="40" rx="5" fill="#059669" stroke="#10b981" stroke-width="2"/>
+  <rect x="315" y="185" width="20" height="25" rx="2" fill="#064e3b"/>
+  <circle cx="325" cy="195" r="6" fill="none" stroke="#10b981" stroke-width="2"/>
+  <rect x="320" y="200" width="10" height="15" rx="2" fill="#10b981"/>
+  <circle cx="325" cy="207" r="2" fill="#064e3b"/>
+  
+  <text x="325" y="235" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="8" font-weight="bold">ENCRYPTED</text>
+  <text x="325" y="245" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="8" font-weight="bold">AES-256</text>
+  
+  <!-- Network Security -->
+  <g transform="translate(50, 50)">
+    <circle cx="0" cy="0" r="15" fill="#1e40af" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="30" cy="0" r="15" fill="#1e40af" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="60" cy="0" r="15" fill="#1e40af" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="15" y1="0" x2="15" y2="0" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="45" y1="0" x2="45" y2="0" stroke="#60a5fa" stroke-width="2"/>
+    
+    <text x="30" y="25" text-anchor="middle" fill="#3b82f6" font-family="monospace" font-size="7" font-weight="bold">SECURE NETWORK</text>
+  </g>
+  
+  <!-- VPN Tunnel -->
+  <rect x="120" y="40" width="160" height="20" rx="10" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="200" y="53" text-anchor="middle" fill="#8b5cf6" font-family="monospace" font-size="8" font-weight="bold">VPN TUNNEL</text>
+  
+  <!-- Data packets -->
+  <circle cx="140" cy="50" r="3" fill="#22c55e">
+    <animate attributeName="cx" values="140;260;140" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="180" cy="50" r="3" fill="#3b82f6">
+    <animate attributeName="cx" values="180;260;180" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="220" cy="50" r="3" fill="#f59e0b">
+    <animate attributeName="cx" values="220;260;220" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Security Dashboard -->
+  <rect x="300" y="80" width="80" height="60" rx="5" fill="#1f2937" stroke="#374151" stroke-width="2"/>
+  <rect x="305" y="85" width="70" height="15" fill="#059669"/>
+  <text x="340" y="95" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="8" font-weight="bold">SECURITY HUB</text>
+  
+  <text x="310" y="110" fill="#22c55e" font-family="monospace" font-size="6">• Firewall: ACTIVE</text>
+  <text x="310" y="118" fill="#22c55e" font-family="monospace" font-size="6">• Antivirus: ON</text>
+  <text x="310" y="126" fill="#fbbf24" font-family="monospace" font-size="6">• Updates: 1 PENDING</text>
+  <text x="310" y="134" fill="#ef4444" font-family="monospace" font-size="6">• Threats: 1 BLOCKED</text>
+  
+  <!-- Binary code background -->
+  <g opacity="0.1">
+    <text x="20" y="20" fill="#22c55e" font-family="monospace" font-size="10">01001000 01100001 01100011</text>
+    <text x="20" y="35" fill="#22c55e" font-family="monospace" font-size="10">01101011 01100101 01110010</text>
+    <text x="20" y="280" fill="#ef4444" font-family="monospace" font-size="10">01010110 01101001 01110010</text>
+    <text x="20" y="295" fill="#ef4444" font-family="monospace" font-size="10">01110101 01110011 00100000</text>
+  </g>
+  
+  <!-- Security alerts -->
+  <rect x="20" y="250" width="120" height="30" rx="5" fill="#7f1d1d" stroke="#ef4444" stroke-width="1" opacity="0.9">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="80" y="263" text-anchor="middle" fill="#fca5a5" font-family="monospace" font-size="8" font-weight="bold">SECURITY ALERT</text>
+  <text x="80" y="273" text-anchor="middle" fill="#fca5a5" font-family="monospace" font-size="7">Malware blocked: trojan.exe</text>
+  
+  <!-- Status indicators -->
+  <circle cx="360" cy="20" r="5" fill="#22c55e">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="375" y="25" fill="#22c55e" font-family="monospace" font-size="8" font-weight="bold">PROTECTED</text>
+</svg>
